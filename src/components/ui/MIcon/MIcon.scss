@@ -1,0 +1,11 @@
+.m-icon {
+  display: inline-flex;
+  // height: 100%;
+  width: 1rem;
+  margin: auto;
+
+  &-inner {
+    margin: auto;
+    max-height: 100%;
+  }
+}
