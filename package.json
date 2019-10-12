@@ -10,9 +10,10 @@
     "react-scripts": "3.2.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "npm run styles && react-scripts start",
+    "build": "npm run styles && react-scripts build",
     "test": "react-scripts test",
+    "styles": "node-sass-chokidar src/ -o src/",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
