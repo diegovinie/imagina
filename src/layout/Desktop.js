@@ -2,6 +2,7 @@ import React from 'react';
 import './Desktop.css'
 import MIcon from '../components/ui/MIcon'
 import MainMenuItem from '../components/ui/MainMenuItem'
+import DishCard from '../components/ui/DishCard'
 
 const Desktop = props => (
   <div className="desktop container">
@@ -51,7 +52,7 @@ const Desktop = props => (
             <img className="image" src="/static/images/headerimage.png"></img>
           </div>
 
-          <section className="mt-5">
+          <section className="my-5">
             <div className="row">
               <div className="col-sm-6 px-0">
                 <h2 className="font-weight-bold">
@@ -69,12 +70,27 @@ const Desktop = props => (
             </div>
           </section>
 
-          <section>
-            <MainMenuItem />
-            <MainMenuItem />
-            <MainMenuItem />
+          <section className="my-5">
+            <MainMenuItem active icon="all" label="all" />
+            <MainMenuItem icon="pizza" label="Pizza" />
+            <MainMenuItem icon="asian" label="Asian" />
+            <MainMenuItem icon="burgers" label="Burgers" />
+            <MainMenuItem icon="meat" label="Barbecue" />
+            <MainMenuItem icon="ice" label="Dessers" />
+            <MainMenuItem icon="thai" label="Thai" />
+            <MainMenuItem icon="ice" label="Sushi" />
+          </section>
+
+          <section className="my-5">
+            <DishCard/>
+            <DishCard/>
+            <DishCard/>
+            <DishCard/>
+            <DishCard/>
+            <DishCard/>
 
           </section>
+
         </main>
         <footer></footer>
       </div>
