@@ -1,8 +1,8 @@
 import React from 'react';
 import './Desktop.css'
 import MIcon from '../components/ui/MIcon'
-import MainMenuItem from '../components/ui/MainMenuItem'
-import DishCard from '../components/ui/DishCard'
+import MainMenuCategories from '../components/ui/MainMenuCategories'
+import MainMenuProductCard from '../components/ui/MainMenuProductCard'
 import Cart from '../components/ui/Cart'
 
 const Desktop = props => (
@@ -39,7 +39,7 @@ const Desktop = props => (
             <div className="col-8 offset-4">
               <div className="h5 text-primary font-weight-bold mb-0">
                 $0 delivery for 30 days!
-                <img src="/static/images/d.png" className="px-3 mb-1" style={{ height: '1.3rem' }}></img>
+                <img src="/static/images/d.png" alt="d" className="px-3 mb-1" style={{ height: '1.3rem' }}></img>
               </div>
               <div className="text-muted">
                 <small>$0 delifery fee for orders over $10 for 30 days</small>
@@ -50,7 +50,7 @@ const Desktop = props => (
                 <MIcon icon="arrow-right-p" scale="0.8" class="ml-2" />
               </button>
             </div>
-            <img className="image" src="/static/images/headerimage.png"></img>
+            <img className="image" alt="headerimage" src="/static/images/headerimage.png"></img>
           </div>
 
           <section className="my-5">
@@ -71,28 +71,16 @@ const Desktop = props => (
             </div>
           </section>
 
-          <section className="my-5">
-            <div>
-              <MainMenuItem active icon="all" label="all" />
-              <MainMenuItem icon="pizza" label="Pizza" />
-              <MainMenuItem icon="asian" label="Asian" />
-              <MainMenuItem icon="burgers" label="Burgers" />
-              <MainMenuItem icon="meat" label="Barbecue" />
-              <MainMenuItem icon="ice" label="Dessers" />
-              <MainMenuItem icon="thai" label="Thai" />
-              <MainMenuItem icon="ice" label="Sushi" />
-
-            </div>
-          </section>
+          <MainMenuCategories />
 
           <section className="my-5">
             <div>
-              <DishCard/>
-              <DishCard/>
-              <DishCard/>
-              <DishCard/>
-              <DishCard/>
-              <DishCard/>
+              <MainMenuProductCard/>
+              <MainMenuProductCard/>
+              <MainMenuProductCard/>
+              <MainMenuProductCard/>
+              <MainMenuProductCard/>
+              <MainMenuProductCard/>
 
             </div>
 

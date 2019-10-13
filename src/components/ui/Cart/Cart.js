@@ -6,7 +6,7 @@ import PlusMinusButton from '../PlusMinusButton'
 const Cart = props => (
   <section className="cart">
     <h2 className="h5 font-weight-bold py-4">
-      My <img src="/static/images/emoji.png" className="mx-1 mb-1" style={{width: '1rem'}}></img>
+      My <img src="/static/images/emoji.png" alt="emoji" className="mx-1 mb-1" style={{width: '1rem'}}></img>
       <br/> Order
     </h2>
     <div className="jumbotron bg-info row pt-5 pb-3">
