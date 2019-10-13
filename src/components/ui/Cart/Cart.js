@@ -1,6 +1,7 @@
 import React from 'react'
 import './Cart.css'
 import CartItem from '../CartItem'
+import PlusMinusButton from '../PlusMinusButton'
 
 const Cart = props => (
   <section className="cart">
@@ -18,18 +19,24 @@ const Cart = props => (
       <CartItem />
       <CartItem />
       <CartItem />
+      <CartItem />
+      <CartItem />
+      <CartItem />
+      <CartItem />
     </div>
     <div  className="row">
       <span className="flex-grow-1">Total:</span>
       <span className="font-weight-bold">$25.97</span>
     </div>
-    <div style={{ width: '4.5rem' }} className="input-group input-group-sm mb-3">
-      <div className="input-group-prepend">
-        <button style={{ width: '1.5rem' }} className="btn btn-outline-secondary m-auto px-0" type="button" id="button-addon1">-</button>
+    <div className="row my-4">
+      <div className="col-6 pl-0 my-auto">
+        Persons:
+        <PlusMinusButton />
       </div>
-      <input type="text" className="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1" />
-      <div className="input-group-append">
-        <button style={{ width: '1.5rem' }} className="btn btn-outline-secondary m-auto px-0" type="button" id="button-addon1">+</button>
+      <div className="col-6 px-0 my-auto">
+        <button className="btn btn-secondary btn-block btn-lg">
+          Checkout
+        </button>
       </div>
     </div>
   </section>
