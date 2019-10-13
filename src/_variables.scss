@@ -28,7 +28,7 @@ $success:       $green;
 $info:          $purple;
 $warning:       $yellow;
 $danger:        $red;
-$light:         $gray-100;
+$light:         #fdfdfb;
 $dark:          $gray-800;
 
 // breakpoints
@@ -59,7 +59,7 @@ $container-max-widths: (
 // fonts
 @font-face {
   font-family: "Lato";
-  src: url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+  src: url(/static/fonts/Lato-Regular.ttf);
 }
 
 $font-family-sans-serif: Lato, sans-serif;
