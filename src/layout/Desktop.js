@@ -3,6 +3,7 @@ import './Desktop.css'
 import MIcon from '../components/ui/MIcon'
 import MainMenuItem from '../components/ui/MainMenuItem'
 import DishCard from '../components/ui/DishCard'
+import Cart from '../components/ui/Cart'
 
 const Desktop = props => (
   <div className="desktop container">
@@ -34,7 +35,7 @@ const Desktop = props => (
         </header>
 
         <main className="py-5">
-          <div class="jumbotron row pt-5 pb-3" style={{ backgroundColor: '#fff7eb' }}>
+          <div className="jumbotron row pt-5 pb-3" style={{ backgroundColor: '#fff7eb' }}>
             <div className="col-8 offset-4">
               <div className="h5 text-primary font-weight-bold mb-0">
                 $0 delivery for 30 days!
@@ -71,31 +72,48 @@ const Desktop = props => (
           </section>
 
           <section className="my-5">
-            <MainMenuItem active icon="all" label="all" />
-            <MainMenuItem icon="pizza" label="Pizza" />
-            <MainMenuItem icon="asian" label="Asian" />
-            <MainMenuItem icon="burgers" label="Burgers" />
-            <MainMenuItem icon="meat" label="Barbecue" />
-            <MainMenuItem icon="ice" label="Dessers" />
-            <MainMenuItem icon="thai" label="Thai" />
-            <MainMenuItem icon="ice" label="Sushi" />
+            <div>
+              <MainMenuItem active icon="all" label="all" />
+              <MainMenuItem icon="pizza" label="Pizza" />
+              <MainMenuItem icon="asian" label="Asian" />
+              <MainMenuItem icon="burgers" label="Burgers" />
+              <MainMenuItem icon="meat" label="Barbecue" />
+              <MainMenuItem icon="ice" label="Dessers" />
+              <MainMenuItem icon="thai" label="Thai" />
+              <MainMenuItem icon="ice" label="Sushi" />
+
+            </div>
           </section>
 
           <section className="my-5">
-            <DishCard/>
-            <DishCard/>
-            <DishCard/>
-            <DishCard/>
-            <DishCard/>
-            <DishCard/>
+            <div>
+              <DishCard/>
+              <DishCard/>
+              <DishCard/>
+              <DishCard/>
+              <DishCard/>
+              <DishCard/>
+
+            </div>
 
           </section>
 
         </main>
         <footer></footer>
       </div>
-      <div className="col-sm-3 bg-light" style={{ height: '100vh' }}>
-      </div>
+      <aside className="col-sm-3 bg-light container px-5 py-4">
+        <header className="navbar row py-4 px-0">
+          <div className="row w-100">
+            <div className="ml-auto">
+              <MIcon icon="user" class="mx-3" />
+              <span className="badge badge-secondary p-2">4</span>
+            </div>
+          </div>
+        </header>
+        <Cart />
+        <section></section>
+        <section></section>
+      </aside>
     </div>
   </div>
 )

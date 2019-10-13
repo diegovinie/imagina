@@ -1,0 +1,27 @@
+.cart-item {
+  font-size: 0.65rem;
+  min-height: 50px;
+
+  &-image {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    // min-height: 50px;
+    height: 30px;
+    border-radius: 10%;
+  }
+
+  &-details {
+    display: flex;
+    font-weight: bold;
+
+    &-quantity {
+      flex: 1 0 auto;
+    }
+
+    &-title {
+      // flex: 1 0 auto;
+    }
+
+  }
+}
