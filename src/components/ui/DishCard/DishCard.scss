@@ -1,0 +1,28 @@
+.dish-card {
+  width: 33%;
+  display: inline-block;
+
+  &-image {
+    background-position: center;
+    background-size: cover;
+    // min-height: 100px;
+    padding-top: 50%;
+    border-radius: 1rem;
+    position: relative;
+
+    &-time {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      border-top-right-radius: 1rem;
+      border-bottom-left-radius: 1rem;
+      width: fit-content;
+      padding: 0.3rem 1rem;
+      font-size: 0.75rem;
+    }
+  }
+
+  &-details {
+    font-size: 0.75rem;
+  }
+}
