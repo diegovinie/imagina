@@ -1,0 +1,29 @@
+body {
+  background-color: antiquewhite;
+
+}
+.desktop {
+  min-height: 100vh;
+  background-color: white;
+
+  & .form-group {
+    position: relative;
+  }
+
+  & .hola {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+  }
+  & .jumbotron {
+    position: relative;
+  }
+
+  & .image {
+    position: absolute;
+    bottom: 0;
+    left: 2rem;
+    width:200px;
+  }
+}
