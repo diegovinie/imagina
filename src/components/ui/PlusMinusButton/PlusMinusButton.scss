@@ -1,0 +1,12 @@
+.plus-minus-button {
+  &-plus, &-minus {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  &-input {
+    height: 1.45rem !important;
+    border-color: #000;
+    background-color: #fff !important;
+  }
+}

@@ -50,7 +50,7 @@ const Cart = props => {
         <span className="font-weight-bold">${formatCurrency(total)}</span>
       </div>
       <hr/>
-      <div className="row my-4">
+      <div className="cart-persons row my-4">
         <div className="col-6 pl-0 my-auto">
           Persons:
           <PlusMinusButton />
