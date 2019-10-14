@@ -10,9 +10,9 @@ const Navbar = props => {
   const handleInput = e => dispatch({type: 'setSearch', search: e.target.value})
 
   return (
-    <header className="navbar row py-4 px-0">
+    <header className="navbar row py-4 px-0 px-sm-5">
       <div className="col-1 col-sm-3 d-flex pl-0">
-        <button className="btn pl-4 pl-sm-0">
+        <button className="btn pl-4 pl-sm-3">
           <i className="fa fa-bars" />
         </button>
 

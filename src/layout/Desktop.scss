@@ -5,7 +5,8 @@ body {
 .home {
   min-height: 100vh;
   background-color: white;
-  padding: 1rem 5rem;
+  // padding: 1rem 5rem;
+  padding-left: 1rem;
 
   & .form-group {
     position: relative;
@@ -26,6 +27,10 @@ body {
     bottom: 0;
     left: 2rem;
     width:200px;
+  }
+
+  &-delivery-button {
+    font-size: 0.75rem;
   }
 }
 

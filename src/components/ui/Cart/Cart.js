@@ -29,12 +29,22 @@ const Cart = props => {
         My <img src="/static/images/emoji.png" alt="emoji" className="mx-1 mb-1" style={{width: '1rem'}}></img>
         <br/> Order
       </h2>
-      <div className="jumbotron bg-info row pt-5 pb-3">
-        <div className="col-8 offset-4">
+      {(expandedItems.length > 0) && (
+          <div className="cart-board jumbotron bg-info row py-3 px-3">
+            <div className="text-white w-100 py-2">
+              <span>625 St Marks Ave</span>
+              <span className="text-secondary float-right">Edit</span>
 
-        </div>
-      </div>
-      <div className="cart-products">
+            </div>
+            <div className="text-white w-100 py-2">
+              <span>35 min</span>
+              <span className="text-secondary float-right">Choose time</span>
+            </div>
+          </div>
+        )}
+
+
+      <div className={`cart-products ${expandedItems.length > 0 ? 'expand' : ''}`}>
         {expandedItems
           .map((i, index) => (
             <CartItem

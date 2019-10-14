@@ -3,7 +3,9 @@
   top: 0;
 
   &-products {
-    min-height: 30vh;
+    &.expand {
+      min-height: 30vh;
+    }
   }
 
   &-persons {
@@ -14,6 +16,10 @@
     &-button {
       font-size: 0.6rem;
     }
+  }
+
+  &-board {
+    font-size: 0.75rem;
   }
 }
 
