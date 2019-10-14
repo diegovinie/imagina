@@ -24,8 +24,11 @@ const MainMenuProductCard = props => (
       { props.name }
     </div>
     <div className="main-menu-product-card-details">
-      <span className="">{ props.qualification }</span>
-      <span className="px-3 text-muted">Deli Bagels</span>
+      <span className="">
+        <i className="fa fa-star-o mr-1" />
+        { props.qualification }
+      </span>
+      <span className="px-3 text-muted">${ props.price }</span>
     </div>
   </article>
 )

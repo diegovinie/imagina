@@ -2,7 +2,6 @@ import React from 'react';
 import './Desktop.css'
 import MIcon from '../components/ui/MIcon'
 import MainMenu from '../components/ui/MainMenu'
-import MainMenuCategories from '../components/ui/MainMenuCategories'
 import Cart from '../components/ui/Cart'
 
 const Desktop = props => (
@@ -70,9 +69,6 @@ const Desktop = props => (
               </div>
             </div>
           </section>
-
-          <MainMenuCategories />
-
           <MainMenu />
         </main>
         <footer></footer>

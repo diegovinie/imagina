@@ -4,17 +4,23 @@ import CartItem from '../CartItem'
 import PlusMinusButton from '../PlusMinusButton'
 import {useStateValue} from '../../../store/StateContext'
 
+const reduceTotal = (acc, item) => acc + (item.product && item.product.price) * item.quantity
+
+const formatCurrency = value => value.toLocaleString('es-ES', {minimumFractionDigits: 2})
+
 const Cart = props => {
   const [{products, cart}, dispatch] = useStateValue()
+
+  const handlePlus = productId => () => dispatch({ type: 'addProductToCart', productId })
+
+  const handleMinus = productId => () => dispatch({ type: 'removeProductFromCart', productId })
 
   const expandedItems = useMemo(() => cart.map(p => ({
       ...p,
       product: products.find(({id}) => id === p.productId) })
     ), [cart, products])
 
-  const handlePlus = productId => () => dispatch({ type: 'addProductToCart', productId })
-
-  const handleMinus = productId => () => dispatch({ type: 'removeProductFromCart', productId })
+  const total = useMemo(() => expandedItems.reduce(reduceTotal, 0), [expandedItems])
 
   return (
     <section className="cart">
@@ -27,7 +33,7 @@ const Cart = props => {
 
         </div>
       </div>
-      <div>
+      <div className="cart-products">
         {expandedItems
           .map((i, index) => (
             <CartItem
@@ -40,8 +46,9 @@ const Cart = props => {
       </div>
       <div  className="row">
         <span className="flex-grow-1">Total:</span>
-        <span className="font-weight-bold">$25.97</span>
+        <span className="font-weight-bold">${formatCurrency(total)}</span>
       </div>
+      <hr/>
       <div className="row my-4">
         <div className="col-6 pl-0 my-auto">
           Persons:
@@ -57,7 +64,5 @@ const Cart = props => {
 
   )
 }
-
-
 
 export default Cart

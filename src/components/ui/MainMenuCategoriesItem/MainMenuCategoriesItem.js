@@ -10,6 +10,7 @@ import MIcon from '../MIcon'
 * @param {String} props.name
 * @param {String} props.src
 * @param {String} props.icon
+* @param {Function} props.setActiveItem
  */
 const MainMenuCategoriesItem = props => {
 
@@ -25,8 +26,10 @@ const MainMenuCategoriesItem = props => {
     'border-0': props.active
   })
 
+  const handleClick = () => props.setActiveItem(props.id)
+
   return (
-    <section className="main-menu-categories-item">
+    <section onClick={handleClick} className="main-menu-categories-item">
       <div className={containerClasses}>
         <div className={buttonClasses} >
           <MIcon src={props.icon} scale="1.5" />

@@ -1,6 +1,5 @@
 export const addOrIncrement = items => productId => {
   const product = items.find(p => productId === p.productId)
-  console.log(productId, items, product)
   if (product) {
     product.quantity++
     return [...items]

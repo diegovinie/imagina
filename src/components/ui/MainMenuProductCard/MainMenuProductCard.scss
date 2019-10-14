@@ -1,6 +1,8 @@
 .main-menu-product-card {
   width: 33%;
   display: inline-block;
+  cursor: pointer;
+  border-radius: 1rem;
 
   &-image {
     background-position: center;
@@ -24,5 +26,9 @@
 
   &-details {
     font-size: 0.75rem;
+  }
+
+  &:hover {
+    box-shadow: 5px 5px 10px #999;
   }
 }
