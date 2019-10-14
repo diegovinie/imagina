@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import './App.css';
-import LayoutDesktop from './layout/Desktop'
+import HomePage from './pages/Home'
 import {useStateValue} from './store/StateContext'
 import {getProducts, getCategories} from './services/api'
 
@@ -13,7 +13,7 @@ function App() {
   }, [dispatch])
 
   return (
-    <LayoutDesktop />
+    <HomePage />
   );
 }
 

@@ -1,12 +1,12 @@
 import React from 'react';
-import './Desktop.css'
+import './Home.css'
 import MIcon from '../components/ui/MIcon'
 import MainMenu from '../components/ui/MainMenu'
 import Cart from '../components/ui/Cart'
 import Navbar from '../components/ui/Navbar'
 import HomeBanner from '../components/ui/HomeBanner'
 
-const Desktop = props => (
+const Home = props => (
   <div className="home container">
     <div className="row">
       <div className="col-sm-9 px-sm-4 container">
@@ -51,4 +51,4 @@ const Desktop = props => (
   </div>
 )
 
-export default Desktop
+export default Home
