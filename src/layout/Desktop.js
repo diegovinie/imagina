@@ -3,54 +3,16 @@ import './Desktop.css'
 import MIcon from '../components/ui/MIcon'
 import MainMenu from '../components/ui/MainMenu'
 import Cart from '../components/ui/Cart'
+import Navbar from '../components/ui/Navbar'
+import HomeBanner from '../components/ui/HomeBanner'
 
 const Desktop = props => (
   <div className="desktop container">
     <div className="row">
       <div style={{ padding: '1rem 5rem' }} className="col-sm-9 container">
-        <header className="navbar row py-4 px-0">
-          <div className="col-sm-3 d-flex pl-0">
-            <button className="btn">
-              <i className="fa fa-bars" />
-            </button>
-
-            <div className="h5 font-weight-bold my-auto ml-3">
-              <a href="/" className="">Chukwudi</a>
-            </div>
-          </div>
-          <div className="col-sm-9">
-            <div className="form-group my-0 ml-3">
-              <input
-                type="text"
-                className="form-control border-0 bg-light"
-                style={{ paddingLeft: '3.5rem' }}
-                placeholder="Search" />
-              <div className="hola px-4 d-flex">
-                <MIcon icon="lens" scale="0.9" />
-              </div>
-            </div>
-          </div>
-
-        </header>
-
+        <Navbar />
         <main className="py-5">
-          <div className="jumbotron row pt-5 pb-3" style={{ backgroundColor: '#fff7eb' }}>
-            <div className="col-8 offset-4">
-              <div className="h5 text-primary font-weight-bold mb-0">
-                $0 delivery for 30 days!
-                <img src="/static/images/d.png" alt="d" className="px-3 mb-1" style={{ height: '1.3rem' }}></img>
-              </div>
-              <div className="text-muted">
-                <small>$0 delifery fee for orders over $10 for 30 days</small>
-
-              </div>
-              <button className="btn btn-link float-right">
-                <small>Learn more</small>
-                <MIcon icon="arrow-right-p" scale="0.8" class="ml-2" />
-              </button>
-            </div>
-            <img className="image" alt="headerimage" src="/static/images/headerimage.png"></img>
-          </div>
+          <HomeBanner />
 
           <section className="my-5">
             <div className="row">
