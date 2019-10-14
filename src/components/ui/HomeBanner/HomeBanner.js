@@ -3,7 +3,7 @@ import './HomeBanner.css'
 import MIcon from '../MIcon'
 
 const HomeBanner = props => (
-  <div className="jumbotron row pt-5 pb-3" style={{ backgroundColor: '#fff7eb' }}>
+  <div className="jumbotron row pt-5 pb-3 d-none d-sm-block" style={{ backgroundColor: '#fff7eb' }}>
     <div className="col-8 offset-4">
       <div className="h5 text-primary font-weight-bold mb-0">
         $0 delivery for 30 days!

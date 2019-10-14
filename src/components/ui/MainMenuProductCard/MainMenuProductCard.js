@@ -12,7 +12,7 @@ import './MainMenuProductCard.css'
  * @param {Function} props.handleClick
  */
 const MainMenuProductCard = props => (
-  <article onClick={props.handleClick} className="main-menu-product-card p-3">
+  <article onClick={props.handleClick} className="main-menu-product-card col-12 col-sm-4 p-3">
     <div
         className="main-menu-product-card-image"
         style={{ backgroundImage: `url(${props.image})` }}>

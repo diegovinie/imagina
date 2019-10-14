@@ -2,9 +2,10 @@ body {
   background-color: antiquewhite;
 
 }
-.desktop {
+.home {
   min-height: 100vh;
   background-color: white;
+  padding: 1rem 5rem;
 
   & .form-group {
     position: relative;
@@ -25,5 +26,11 @@ body {
     bottom: 0;
     left: 2rem;
     width:200px;
+  }
+}
+
+@media screen and (max-width: 577px) {
+  .home {
+    padding: 1rem 1rem;
   }
 }

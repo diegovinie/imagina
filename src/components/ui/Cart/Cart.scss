@@ -5,4 +5,15 @@
   &-products {
     min-height: 30vh;
   }
+
+  &-checkout {
+    &-button {
+      font-size: 0.6rem;
+    }
+  }
+}
+
+@media screen and (max-width: 577px) {
+  .cart {
+  }
 }

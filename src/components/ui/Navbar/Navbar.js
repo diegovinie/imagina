@@ -5,16 +5,16 @@ import MIcon from '../MIcon'
 
 const Navbar = props => (
   <header className="navbar row py-4 px-0">
-    <div className="col-sm-3 d-flex pl-0">
-      <button className="btn">
+    <div className="col-1 col-sm-3 d-flex pl-0">
+      <button className="btn pl-4 pl-sm-0">
         <i className="fa fa-bars" />
       </button>
 
       <div className="h5 font-weight-bold my-auto ml-3">
-        <a href="/" className="">Chukwudi</a>
+        <a href="/" className="d-none d-sm-block">Chukwudi</a>
       </div>
     </div>
-    <div className="col-sm-9">
+    <div className="col-11 col-sm-9">
       <div className="form-group my-0 ml-3">
         <input
           type="text"

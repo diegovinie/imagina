@@ -20,7 +20,7 @@ const MainMenu = props => {
           setActiveItem={setActiveItem}
           categories={categories} />
       </div>
-      <div className="main-menu-products my-5">
+      <div className="main-menu-products row my-5">
         {products
           .filter(p => (activeItem === 1) || (p.categoryId === activeItem))
           .map((product, index) => (

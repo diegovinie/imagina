@@ -29,7 +29,7 @@ const MainMenuCategoriesItem = props => {
   const handleClick = () => props.setActiveItem(props.id)
 
   return (
-    <section onClick={handleClick} className="main-menu-categories-item">
+    <section onClick={handleClick} className="main-menu-categories-item mb-3">
       <div className={containerClasses}>
         <div className={buttonClasses} >
           <MIcon src={props.icon} scale="1.5" />
@@ -42,7 +42,5 @@ const MainMenuCategoriesItem = props => {
     </section>
   )
 }
-
-
 
 export default MainMenuCategoriesItem

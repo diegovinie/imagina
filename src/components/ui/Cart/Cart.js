@@ -2,6 +2,7 @@ import React, {useMemo} from 'react'
 import './Cart.css'
 import CartItem from '../CartItem'
 import PlusMinusButton from '../PlusMinusButton'
+import MIcon from '../MIcon'
 import {useStateValue} from '../../../store/StateContext'
 
 const reduceTotal = (acc, item) => acc + (item.product && item.product.price) * item.quantity
@@ -54,9 +55,10 @@ const Cart = props => {
           Persons:
           <PlusMinusButton />
         </div>
-        <div className="col-6 px-0 my-auto">
-          <button className="btn btn-secondary btn-block btn-lg">
+        <div className="cart-checkout col-6 px-0 my-auto">
+          <button className="cart-checkout-button btn btn-secondary btn-block btn-lg font-weight-bold px-0 py-3">
             Checkout
+            <MIcon icon="arrow-right" scale="0.8" class="ml-2" />
           </button>
         </div>
       </div>
