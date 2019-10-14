@@ -4,6 +4,7 @@ export const initialState = {
   categories: [],
   products: [],
   cart: [],
+  search: '',
   order: {
     amount: 0,
     fee: 0,
@@ -24,6 +25,12 @@ export const reducer = (state, action) => {
       return {
         ...state,
         categories: action.categories
+      }
+
+    case 'setSearch':
+      return {
+        ...state,
+        search: action.search
       }
 
     case 'addProductToCart':

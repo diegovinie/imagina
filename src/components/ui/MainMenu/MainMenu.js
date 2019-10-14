@@ -5,8 +5,13 @@ import MainMenuCategories from '../MainMenuCategories'
 
 import {useStateValue} from '../../../store/StateContext'
 
+const searchFilter = query => product => {
+  const re = new RegExp(query, 'i')
+  return re.test(product.name)
+}
+
 const MainMenu = props => {
-  const [{products, categories}, dispatch] = useStateValue()
+  const [{products, categories, search}, dispatch] = useStateValue()
 
   const [activeItem, setActiveItem] = useState(1)
 
@@ -23,6 +28,7 @@ const MainMenu = props => {
       <div className="main-menu-products row my-5">
         {products
           .filter(p => (activeItem === 1) || (p.categoryId === activeItem))
+          .filter(searchFilter(search))
           .map((product, index) => (
             <MainMenuProductCard
               key={'product-' + index}
