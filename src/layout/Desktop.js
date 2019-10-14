@@ -1,8 +1,8 @@
 import React from 'react';
 import './Desktop.css'
 import MIcon from '../components/ui/MIcon'
+import MainMenu from '../components/ui/MainMenu'
 import MainMenuCategories from '../components/ui/MainMenuCategories'
-import MainMenuProductCard from '../components/ui/MainMenuProductCard'
 import Cart from '../components/ui/Cart'
 
 const Desktop = props => (
@@ -73,19 +73,7 @@ const Desktop = props => (
 
           <MainMenuCategories />
 
-          <section className="my-5">
-            <div>
-              <MainMenuProductCard/>
-              <MainMenuProductCard/>
-              <MainMenuProductCard/>
-              <MainMenuProductCard/>
-              <MainMenuProductCard/>
-              <MainMenuProductCard/>
-
-            </div>
-
-          </section>
-
+          <MainMenu />
         </main>
         <footer></footer>
       </div>

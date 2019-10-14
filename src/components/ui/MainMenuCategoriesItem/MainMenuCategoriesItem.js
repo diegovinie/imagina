@@ -26,7 +26,7 @@ const MainMenuCategoriesItem = props => {
   })
 
   return (
-    <div className="main-menu-categories-item">
+    <section className="main-menu-categories-item">
       <div className={containerClasses}>
         <div className={buttonClasses} >
           <MIcon src={props.icon} scale="1.5" />
@@ -36,7 +36,7 @@ const MainMenuCategoriesItem = props => {
 
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

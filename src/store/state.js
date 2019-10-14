@@ -1,6 +1,14 @@
+import {addOrIncrement, removeOrDecrement} from './helpers'
+
 export const initialState = {
   categories: [],
-  products: []
+  products: [],
+  cart: [],
+  order: {
+    amount: 0,
+    fee: 0,
+    total: 0
+  }
 }
 
 export const reducer = (state, action) => {
@@ -9,14 +17,20 @@ export const reducer = (state, action) => {
     case 'setProducts':
       return {
         ...state,
-        dishes: action.products
+        products: action.products
       }
 
     case 'setCategories':
       return {
         ...state,
-        posts: action.categories
+        categories: action.categories
       }
+
+    case 'addProductToCart':
+      return { ...state, cart: addOrIncrement(state.cart)(action.productId) }
+
+    case 'removeProductFromCart':
+      return { ...state, cart: removeOrDecrement(state.cart)(action.productId) }
 
     default:
       return state

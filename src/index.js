@@ -4,7 +4,6 @@ import './index.css';
 import 'font-awesome/css/font-awesome.css'
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import {getProducts, getCategories} from './services/api'
 
 import {initialState, reducer} from './store/state'
 import {StateProvider} from './store/StateContext'

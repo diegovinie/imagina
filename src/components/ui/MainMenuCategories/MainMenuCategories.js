@@ -1,14 +1,10 @@
-import React, {useEffect, useState} from 'react'
+import React from 'react'
 import './MainMenuCategories.css'
 import Item from '../MainMenuCategoriesItem'
-import {getCategories} from '../../../services/api'
+import {useStateValue} from '../../../store/StateContext'
 
 const MainMenuCategories = props => {
-  const [categories, setCategories] = useState([])
-
-  useEffect(() => {
-    getCategories().then(setCategories)
-  }, [])
+  const [{categories}, ] = useStateValue()
 
   return (
     <section className="my-5">
@@ -20,7 +16,6 @@ const MainMenuCategories = props => {
             icon={cat.icon}
             name={cat.name} />
         ))}
-
       </div>
     </section>
   )

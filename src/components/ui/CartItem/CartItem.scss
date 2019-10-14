@@ -1,6 +1,7 @@
 .cart-item {
   font-size: 0.65rem;
   min-height: 50px;
+  position: relative;
 
   &-image {
     background-position: center;
@@ -23,5 +24,27 @@
       // flex: 1 0 auto;
     }
 
+  }
+
+  &-buttons {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 1rem;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    border-radius: 6px;
+    cursor: pointer;
+
+    &-container {
+      margin-left: auto;
+      margin-top: auto;
+    }
+  }
+
+  &:hover .cart-item-buttons {
+    display: flex;
   }
 }
